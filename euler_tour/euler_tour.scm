@@ -1,8 +1,4 @@
-(define input '((0 1) (0 3) (1 4) (2 3) (2 6) (3 4) (3 7) (4  5) (4 8) (5 9) (6 7) (7 8) (7 10) (8 9) (8 11) (10 11)))
-(define testal (make-adjacency-list 12 input))
-(define start 8)
-
-(make-euler-tour testal start)
+(define input '((0 1) (0 3) (1 4) (2 3) (2 6) (3 4) (3 7) (4 5) (4 8) (5 9) (6 7) (7 8) (7 10) (8 9) (8 11) (10 11)))
 
 (define ith
   (lambda (xs i)
@@ -89,3 +85,8 @@
        ;; push {v, u} to S
        (cons (cons v (cons (car (ith al v)) '())) S)
        L)))))
+
+(define testal (make-adjacency-list 12 input))
+(define start 0)
+
+(make-euler-tour testal start)
