@@ -11,7 +11,8 @@ def main():
     adjacent_constarint(edges, d)
     
 def number_of_clauses(n, m, d):
-    return int((n + m*d + n*(d*(d-1))) / 2)
+#    return int((n + m*d + n*(d*(d-1))) / 2)
+    return n + m*d
     
 #    1    2 ...    d  // the color of v_1 is 1 or 2 or ... or d
 #  d+1  d+2 ...   2d  // the color of v_2 is 1 or 2 or ... or d
